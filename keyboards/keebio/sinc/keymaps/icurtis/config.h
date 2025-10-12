@@ -17,15 +17,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 #define TAPPING_TERM 120
+#define RGBLIGHT_LAYERS
 
 /* Use I2C or Serial, not both */
 //
-//#define USE_SERIAL
-//#define USE_I2C
+// #define USE_SERIAL
+// #define USE_I2C
 
-//#ifdef RGBLIGHT_ENABLE
-//#   ifdef NORMAL_MODE
-//#       undef NORMAL_MODE
-//#       define NORMAL_MODE RGBLIGHT_MODE_TWINKLE + 4
-//#   endif
-//#endif
+// #ifdef RGBLIGHT_ENABLE
+// #   ifdef NORMAL_MODE
+// #       undef NORMAL_MODE
+// #       define NORMAL_MODE RGBLIGHT_MODE_TWINKLE + 4
+// #   endif
+// #endif

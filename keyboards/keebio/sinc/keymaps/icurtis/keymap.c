@@ -10,11 +10,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_INS,  KC_END,  KC_LCTL, KC_LALT,KC_LGUI, LT(1, KC_BSPC),KC_SPC,KC_SPC,       LT(1, KC_SPC),  KC_BSPC,KC_RALT, KC_RCTL,     KC_RGUI, KC_LEFT, KC_DOWN, KC_RGHT
   ),
   [1] = LAYOUT_80_with_macro(
-    RGB_TOG,          _______, _______, _______, _______, _______, _______,           _______, _______, _______, _______, _______, _______, _______, _______, KC_PSCR,
-    RGB_HUD, RGB_HUI, KC_ESC, _______, _______, _______, _______, _______,           _______, _______, _______, _______, _______,  KC_F11,  KC_F12,  _______, _______, KC_MPRV,
-    RGB_SAD, RGB_SAI, RGB_TOG, LALT(KC_Q),LALT(KC_W),LALT(KC_E),LALT(KC_R),LALT(KC_T),_______, KC_7,    KC_8,    KC_9,    _______, _______, _______, _______, KC_MNXT,
-    RGB_VAD, RGB_VAI, _______, KC_LCBR, KC_RCBR, KC_LPRN, KC_RPRN, _______,           KC_EQL , KC_4,    KC_5,    KC_6,    _______, _______,          _______, KC_VOLU,
-    RGB_RMOD,RGB_MOD, _______, KC_COMM, KC_DOT , _______, _______, _______,           _______, KC_1,    KC_2,    KC_3,    _______, _______, _______, KC_VOLD,
+    UG_TOGG,          _______, _______, _______, _______, _______, _______,           _______, _______, _______, _______, _______, _______, _______, _______, KC_PSCR,
+    UG_HUED, UG_HUEU, KC_ESC , _______, _______, _______, _______, _______,           _______, _______, _______, _______, _______,  KC_F11,  KC_F12,  _______, _______, KC_MPRV,
+    UG_SATD, UG_SATU, UG_TOGG, LALT(KC_Q),LALT(KC_W),LALT(KC_E),LALT(KC_R),LALT(KC_T),_______, KC_7,    KC_8,    KC_9,    _______, _______, _______, _______, KC_MNXT,
+    UG_VALD, UG_VALU, _______, KC_LCBR, KC_RCBR, KC_LPRN, KC_RPRN, _______,           KC_EQL , KC_4,    KC_5,    KC_6,    _______, _______,          _______, KC_VOLU,
+    UG_NEXT, UG_PREV, _______, KC_COMM, KC_DOT , _______, _______, _______,           _______, KC_1,    KC_2,    KC_3,    _______, _______, _______, KC_VOLD,
     _______, _______, _______, _______, _______, KC_DEL,  KC_BSPC, KC_BSPC,           _______, KC_DEL, _______, _______, _______, _______, _______, _______
   ),
 
