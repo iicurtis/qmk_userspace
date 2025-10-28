@@ -2,38 +2,35 @@
 #include QMK_KEYBOARD_H
 
 enum layers {
-   _QWERTY,
-   _NAV,
-   _MOUSE,
-   _MEDIA,
-   _NUM,
-   _SYMB,
-   _FUN,
-   //_GAMING,
+    _QWERTY,
+    _NAV,
+    _MOUSE,
+    _MEDIA,
+    _NUM,
+    _SYMB,
+    _FUN,
+    //_GAMING,
 };
 
+#if !defined(MIRYOKU_LAYER_LIST)
 
-
-#if !defined (MIRYOKU_LAYER_LIST)
-
-#define MIRYOKU_LAYER_LIST \
-MIRYOKU_X(BASE,   "Base") \
-MIRYOKU_X(EXTRA,  "Extra") \
-MIRYOKU_X(TAP,    "Tap") \
-MIRYOKU_X(BUTTON, "Button") \
-MIRYOKU_X(NAV,    "Nav") \
-MIRYOKU_X(MOUSE,  "Mouse") \
-MIRYOKU_X(MEDIA,  "Media") \
-MIRYOKU_X(NUM,    "Num") \
-MIRYOKU_X(SYM,    "Sym") \
-MIRYOKU_X(FUN,    "Fun")
+#    define MIRYOKU_LAYER_LIST      \
+        MIRYOKU_X(BASE, "Base")     \
+        MIRYOKU_X(EXTRA, "Extra")   \
+        MIRYOKU_X(TAP, "Tap")       \
+        MIRYOKU_X(BUTTON, "Button") \
+        MIRYOKU_X(NAV, "Nav")       \
+        MIRYOKU_X(MOUSE, "Mouse")   \
+        MIRYOKU_X(MEDIA, "Media")   \
+        MIRYOKU_X(NUM, "Num")       \
+        MIRYOKU_X(SYM, "Sym")       \
+        MIRYOKU_X(FUN, "Fun")
 
 #endif
 
-
 enum miryoku_layers {
 #define MIRYOKU_X(LAYER, STRING) U_##LAYER,
-MIRYOKU_LAYER_LIST
+    MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 };
 
@@ -42,19 +39,20 @@ MIRYOKU_LAYER_LIST
 enum {
     U_TD_BOOT,
 #define MIRYOKU_X(LAYER, STRING) U_TD_U_##LAYER,
-MIRYOKU_LAYER_LIST
+    MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 };
 
-#define MIRYOKU_X(LAYER, STRING) \
-void u_td_fn_U_##LAYER(tap_dance_state_t *state, void *user_data) { \
-  if (state->count == 2) { \
-    default_layer_set((layer_state_t)1 << U_##LAYER); \
-  } \
-}
+#define MIRYOKU_X(LAYER, STRING)                                        \
+    void u_td_fn_U_##LAYER(tap_dance_state_t *state, void *user_data) { \
+        if (state->count == 2) {                                        \
+            default_layer_set((layer_state_t)1 << U_##LAYER);           \
+        }                                                               \
+    }
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 
+// clang-format off
 tap_dance_action_t tap_dance_actions[] = {
     [U_TD_U_BASE] = ACTION_TAP_DANCE_FN(u_td_fn_U_BASE),
     [U_TD_U_TAP] = ACTION_TAP_DANCE_FN(u_td_fn_U_TAP),
@@ -65,19 +63,16 @@ tap_dance_action_t tap_dance_actions[] = {
     [U_TD_U_SYM] = ACTION_TAP_DANCE_FN(u_td_fn_U_SYM),
     [U_TD_U_FUN] = ACTION_TAP_DANCE_FN(u_td_fn_U_FUN),
 };
-
+// clang-format on
 
 // shift functions
 
 const key_override_t capsword_key_override = ko_make_basic(MOD_MASK_SHIFT, CW_TOGG, KC_CAPS);
 
-const key_override_t *key_overrides[] = {
-    &capsword_key_override
-};
-
+const key_override_t *key_overrides[] = {&capsword_key_override};
 
 // Shortcut to make keymap more readable
-#define SYM_L   MO(_SYMB)
+#define SYM_L MO(_SYMB)
 
 #define KC_ALAS LALT_T(KC_PAST)
 #define KC_CTPL LCTL_T(KC_BSLS)
@@ -116,15 +111,24 @@ const key_override_t *key_overrides[] = {
 #define KC_SFTSY LSFT_T(KC_RBRC)
 
 // Key combos
-const uint16_t PROGMEM combo_jk_esc[]  = {KC_SFTJ, KC_CTLK, COMBO_END};
-const uint16_t PROGMEM combo_uj_lprn[] = {KC_SFTJ, KC_U, COMBO_END};
+const uint16_t PROGMEM combo_jk[]  = {KC_SFTJ, KC_CTLK, COMBO_END};
+const uint16_t PROGMEM combo_rf[] = {KC_SFTF, KC_R, COMBO_END};
+const uint16_t PROGMEM combo_ed[] = {KC_CTLD, KC_E, COMBO_END};
+const uint16_t PROGMEM combo_ws[] = {KC_ALTS, KC_W, COMBO_END};
+const uint16_t PROGMEM combo_uj[] = {KC_SFTJ, KC_U, COMBO_END};
+const uint16_t PROGMEM combo_ik[] = {KC_CTLK, KC_I, COMBO_END};
+const uint16_t PROGMEM combo_ol[] = {KC_ALTL, KC_O, COMBO_END};
 combo_t                key_combos[]    = {
-    COMBO(combo_jk_esc, KC_ESC),
-    COMBO(combo_uj_lprn, KC_LPRN), // keycodes with modifiers are possible too!
+    COMBO(combo_jk, KC_ESC),
+    COMBO(combo_rf, KC_LPRN),
+    COMBO(combo_ed, KC_LBRC),
+    COMBO(combo_ws, KC_LCBR),
+    COMBO(combo_uj, KC_RPRN),
+    COMBO(combo_ik, KC_RBRC),
+    COMBO(combo_ol, KC_RCBR),
 };
 
-
-
+// clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[_QWERTY] = LAYOUT(
       //┌────────┬────────┬────────┬────────┬────────┬────────┐                                           ┌────────┬────────┬────────┬────────┬────────┬────────┐
