@@ -67,15 +67,6 @@ tap_dance_action_t tap_dance_actions[] = {
 };
 
 
-// Key combos
-// const uint16_t PROGMEM combo_jk_esc[]  = {KC_J, KC_K, COMBO_END};
-// const uint16_t PROGMEM combo_uj_lprn[] = {KC_U, KC_J, COMBO_END};
-// combo_t                key_combos[]    = {
-//     COMBO(combo_jk_esc, KC_ESC),
-//     COMBO(combo_uj_lprn, KC_LPRN), // keycodes with modifiers are possible too!
-// };
-
-
 // shift functions
 
 const key_override_t capsword_key_override = ko_make_basic(MOD_MASK_SHIFT, CW_TOGG, KC_CAPS);
@@ -123,6 +114,16 @@ const key_override_t *key_overrides[] = {
 #define KC_ALTSY LALT_T(KC_RCBR)
 #define KC_CTLSY LCTL_T(KC_LBRC)
 #define KC_SFTSY LSFT_T(KC_RBRC)
+
+// Key combos
+const uint16_t PROGMEM combo_jk_esc[]  = {KC_SFTJ, KC_CTLK, COMBO_END};
+const uint16_t PROGMEM combo_uj_lprn[] = {KC_SFTJ, KC_U, COMBO_END};
+combo_t                key_combos[]    = {
+    COMBO(combo_jk_esc, KC_ESC),
+    COMBO(combo_uj_lprn, KC_LPRN), // keycodes with modifiers are possible too!
+};
+
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[_QWERTY] = LAYOUT(
