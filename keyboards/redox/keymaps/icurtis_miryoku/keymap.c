@@ -118,6 +118,7 @@ const uint16_t PROGMEM combo_ws[] = {KC_ALTS, KC_W, COMBO_END};
 const uint16_t PROGMEM combo_uj[] = {KC_SFTJ, KC_U, COMBO_END};
 const uint16_t PROGMEM combo_ik[] = {KC_CTLK, KC_I, COMBO_END};
 const uint16_t PROGMEM combo_ol[] = {KC_ALTL, KC_O, COMBO_END};
+const uint16_t PROGMEM combo_dc[] = {KC_CTLD, KC_C, COMBO_END};
 combo_t                key_combos[]    = {
     COMBO(combo_jk, KC_ESC),
     COMBO(combo_rf, KC_LPRN),
@@ -126,6 +127,7 @@ combo_t                key_combos[]    = {
     COMBO(combo_uj, KC_RPRN),
     COMBO(combo_ik, KC_RBRC),
     COMBO(combo_ol, KC_RCBR),
+    COMBO(combo_dc, C(KC_C)),
 };
 
 // clang-format off
@@ -180,7 +182,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
          KC_TRNS ,KC_LGUI ,KC_LALT ,KC_LCTL ,KC_LSFT ,KC_NO   ,KC_NO   ,                          KC_NO   ,KC_NO   ,KC_MPRV ,KC_VOLD ,KC_VOLU ,KC_MNXT ,KC_TRNS ,
       //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-         KC_TRNS ,KC_ALGR,TD(U_TD_U_FUN),TD(U_TD_U_MEDIA),KC_NO,KC_NO,KC_NO,KC_NO,       KC_NO   ,KC_NO   ,KC_NO   ,KC_NO   ,KC_NO   ,KC_NO   ,KC_NO   ,KC_RSFT ,
+         KC_TRNS ,KC_ALGR,TD(U_TD_U_FUN),TD(U_TD_U_MEDIA),KC_NO,KC_NO,KC_NO,KC_NO,       KC_NO   ,KC_NO   ,KC_MPLY ,KC_MPRV ,KC_MNXT ,KC_VOLD ,KC_VOLU ,KC_RSFT ,
       //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
          KC_TRNS ,KC_LALT ,KC_LGUI ,KC_NO   ,     KC_NO   ,    KC_NO   ,KC_NO   ,        KC_MSTP ,KC_MPLY ,    KC_MUTE ,     KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT
       //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
