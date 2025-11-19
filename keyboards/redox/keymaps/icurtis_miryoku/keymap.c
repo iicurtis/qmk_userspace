@@ -86,9 +86,9 @@ const key_override_t *key_overrides[] = {&capsword_key_override};
 
 #define KC_MEEC LT(_MEDIA, KC_ESC)
 #define KC_NASP LT(_NAV, KC_SPC)
-#define KC_MSBS LT(_MOUSE, KC_BSPC)
+#define KC_MSTB LT(_MOUSE, KC_TAB)
 #define KC_SYEN LT(_SYMB, KC_ENT)
-#define KC_NUTB LT(_NUM, KC_TAB)
+#define KC_NUBS LT(_NUM, KC_BSPC)
 #define KC_FNDL LT(_FUN, KC_DEL)
 
 #define KC_CTESC LCTL_T(KC_ESC)
@@ -120,7 +120,7 @@ const uint16_t PROGMEM combo_ik[] = {KC_CTLK, KC_I, COMBO_END};
 const uint16_t PROGMEM combo_ol[] = {KC_ALTL, KC_O, COMBO_END};
 const uint16_t PROGMEM combo_dc[] = {KC_CTLD, KC_C, COMBO_END};
 combo_t                key_combos[]    = {
-    COMBO(combo_jk, KC_ESC),
+    // COMBO(combo_jk, KC_ESC),
     COMBO(combo_rf, KC_LPRN),
     COMBO(combo_ed, KC_LBRC),
     COMBO(combo_ws, KC_LCBR),
@@ -142,7 +142,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
          KC_LSFT ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,KC_ADPU ,KC_PGDN ,        KC_HOME ,KC_ADEN ,KC_N    ,KC_M    ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_RSFT ,
       //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-         KC_LCTL ,KC_LALT ,KC_LGUI ,KC_ALAS ,     KC_MEEC ,    KC_NASP ,KC_MSBS ,        KC_SYEN ,KC_NUTB ,    KC_FNDL ,     KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT
+         KC_LCTL ,KC_LALT ,KC_LGUI ,KC_ALAS ,     KC_MEEC ,    KC_NASP ,KC_MSTB ,        KC_SYEN ,KC_NUBS ,    KC_FNDL ,     KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT
       //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
 	),
 
@@ -212,7 +212,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
          KC_TRNS ,KC_LT   ,KC_PIPE ,KC_MINS ,KC_GT   ,KC_BSLS ,KC_ADPU ,KC_PGDN ,        KC_HOME ,KC_ADEN ,KC_GRV  ,KC_UNDS ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_RSFT ,
       //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-         KC_TRNS ,KC_LALT ,KC_LGUI ,KC_ALAS ,     KC_MEEC ,    KC_NASP ,KC_MSBS ,        KC_NO   ,KC_NO   ,    KC_NO   ,     KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT
+         KC_TRNS ,KC_LALT ,KC_LGUI ,KC_ALAS ,     KC_MEEC ,    KC_NASP ,KC_MSTB ,        KC_NO   ,KC_NO   ,    KC_NO   ,     KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT
       //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
 	),
 
