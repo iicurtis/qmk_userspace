@@ -206,11 +206,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       //┌────────┬────────┬────────┬────────┬────────┬────────┐                                           ┌────────┬────────┬────────┬────────┬────────┬────────┐
          KC_TRNS ,KC_F1   ,KC_F2   ,KC_F3   ,KC_F4   ,KC_F5   ,                                            KC_F6   ,KC_F7   ,KC_F8   ,KC_F9   ,KC_F10  ,KC_NAMI ,
       //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐                         ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-         KC_TRNS ,KC_EXLM ,KC_AT   ,KC_HASH ,KC_DLR  ,KC_PERC ,SYM_L   ,                          SYM_L   ,KC_CIRC ,KC_AMPR ,KC_ASTR ,KC_QUES ,KC_QUOT ,KC_EQL  ,
+         KC_TRNS ,KC_LCBR ,KC_AMPR ,KC_ASTR ,KC_LPRN ,KC_RCBR ,SYM_L   ,                          SYM_L   ,KC_CIRC ,KC_AMPR ,KC_ASTR ,KC_QUES ,KC_QUOT ,KC_EQL  ,
       //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-         KC_TRNS ,KC_PLUS ,KC_EQUAL,KC_LPRN ,KC_RPRN ,KC_DQUO ,KC_LBRC ,                          KC_RBRC ,KC_COLN ,KC_RBRC ,KC_LBRC ,KC_RCBR ,KC_LCBR ,KC_SCLN ,
+         KC_TRNS ,KC_COLN ,KC_DLR  ,KC_PERC ,KC_CIRC ,KC_PLUS ,KC_LBRC ,                          KC_RBRC ,KC_COLN ,KC_RBRC ,KC_LBRC ,KC_RCBR ,KC_LCBR ,KC_SCLN ,
       //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-         KC_TRNS ,KC_LT   ,KC_PIPE ,KC_MINS ,KC_GT   ,KC_BSLS ,KC_ADPU ,KC_PGDN ,        KC_HOME ,KC_ADEN ,KC_GRV  ,KC_UNDS ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_RSFT ,
+         KC_TRNS ,KC_TILD ,KC_EXLM ,KC_AT   ,KC_HASH ,KC_PIPE ,KC_ADPU ,KC_PGDN ,        KC_HOME ,KC_ADEN ,KC_GRV  ,KC_UNDS ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_RSFT ,
       //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
          KC_TRNS ,KC_LALT ,KC_LGUI ,KC_ALAS ,     KC_MEEC ,    KC_NASP ,KC_MSTB ,        KC_NO   ,KC_NO   ,    KC_NO   ,     KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT
       //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
