@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define USE_I2C
 
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
-#define QUICK_TAP_TERM 0
+#define QUICK_TAP_TERM 100
 
 #define TAPPING_TERM 200
 #define PERMISSIVE_HOLD

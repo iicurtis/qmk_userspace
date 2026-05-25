@@ -112,6 +112,7 @@ const key_override_t *key_overrides[] = {&capsword_key_override};
 
 // Key combos
 const uint16_t PROGMEM combo_jk[]  = {KC_SFTJ, KC_CTLK, COMBO_END};
+const uint16_t PROGMEM combo_hj[]  = {KC_SFTJ, KC_H, COMBO_END};
 const uint16_t PROGMEM combo_rf[] = {KC_SFTF, KC_R, COMBO_END};
 const uint16_t PROGMEM combo_ed[] = {KC_CTLD, KC_E, COMBO_END};
 const uint16_t PROGMEM combo_ws[] = {KC_ALTS, KC_W, COMBO_END};
@@ -119,8 +120,11 @@ const uint16_t PROGMEM combo_uj[] = {KC_SFTJ, KC_U, COMBO_END};
 const uint16_t PROGMEM combo_ik[] = {KC_CTLK, KC_I, COMBO_END};
 const uint16_t PROGMEM combo_ol[] = {KC_ALTL, KC_O, COMBO_END};
 const uint16_t PROGMEM combo_dc[] = {KC_CTLD, KC_C, COMBO_END};
+const uint16_t PROGMEM combo_dv[] = {KC_CTLD, KC_V, COMBO_END};
+const uint16_t PROGMEM combo_dx[] = {KC_CTLD, KC_X, COMBO_END};
 combo_t                key_combos[]    = {
     // COMBO(combo_jk, KC_ESC),
+    COMBO(combo_hj, KC_LBRC),
     COMBO(combo_rf, KC_LPRN),
     COMBO(combo_ed, KC_LBRC),
     COMBO(combo_ws, KC_LCBR),
@@ -128,6 +132,8 @@ combo_t                key_combos[]    = {
     COMBO(combo_ik, KC_RBRC),
     COMBO(combo_ol, KC_RCBR),
     COMBO(combo_dc, C(KC_C)),
+    COMBO(combo_dx, C(KC_X)),
+    COMBO(combo_dv, C(KC_V)),
 };
 
 // clang-format off
